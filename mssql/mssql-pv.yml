@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    pv.kubernetes.io/provisioned-by: disk.csi.azure.com
+  name: mssql-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: azuredisk-csi-waitforfirstconsumer
+  csi:
+    driver: disk.csi.azure.com
+    readOnly: false
+    volumeHandle: /subscriptions/d65a3138-5e37-4af7-9663-8a8aeec6634a/resourceGroups/MyClusterDemoGroup/providers/Microsoft.Compute/disks/kube-master_disk1_3f34777d458749fbb4cce4cffc1011e3
+    volumeAttributes:
+      fsType: ext4
