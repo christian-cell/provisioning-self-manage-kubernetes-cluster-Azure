@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mssql-data-claim
+  namespace: dotnet
+spec:
+  storageClassName: my-local-storage
+  accessModes:
+  - ReadWriteOnce
+  resources:
+   requests:
+    storage: 7Gi

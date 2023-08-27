@@ -1,0 +1,12 @@
+1 csi_handler.go:234 Error processing "csi-27aad784fc25ba2dbbe64816441831b219dd9c9cc07147f38a05208a805e9607": 
+failed to attach: rpc error: code = NotFound desc = Volume not found, failed with error: Retriable: false, RetryAfter: 
+0s, HTTPStatusCode: 400, RawError: azure.BearerAuthorizer#WithAuthorization: Failed to refresh the Token for request to 
+https://management.azure.com/subscriptions/d65a3138-5e37-4af7-9663-8a8aeec6634a/resourceGroups/MyClusterDemoGroup/providers/Microsoft.Compute/disks/kube-master_disk2_005eab70526b45f7aeebb0b4de649068?api-version=2022-07-02: 
+StatusCode=400 -- Original Error: adal: Refresh request failed. Status Code = '400'. Response body: 
+{"error":"unauthorized_client","error_description":"AADSTS700016: Application with identifier 'xxxx-xxxx-xxxx-xxxx-xxxx' was not found in the directory 
+'VISEO Groupe'. This can happen if the application has not been installed by the administrator of the tenant or consented to by a
+ny user in the tenant. You may have sent your authentication request to the wrong tenant.\r\nTrace 
+ID: 9a585fa1-b6b9-4c45-be34-19e95f802a00\r\nCorrelation ID: 0203d46b-cca5-4309-be79-64dd53e18ef6\r\nTimestamp: 
+2023-08-16 17:25:37Z","error_codes":[700016],"timestamp":"2023-08-16 17:25:37Z","trace_id":"9a585fa1-b6b9-4c45-be34-19e95f802a00",
+"correlation_id":"0203d46b-cca5-4309-be79-64dd53e18ef6","error_uri":"https://login.microsoftonline.com/error?code=700016"} 
+Endpoint https://login.microsoftonline.com/d6397071-8e3e-45d2-a2d6-36698acf0fea/oauth2/token

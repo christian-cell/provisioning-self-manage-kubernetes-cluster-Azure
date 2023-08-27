@@ -5,6 +5,12 @@ Create vnet
 $ az network vnet create -g MyClusterDemoGroup -n KubeVNet --address-prefix 172.0.0.0/16 \
   --subnet-name MySubnet --subnet-prefix 172.0.0.0/24
 
+eliminamos ssh previas
+$ cd ~/.ssh
+$ rm -rf ./id_rsa
+$ rm -rf ./id_rsa.pub
+$ rm -rf ./known_hosts
+
 Create masterNode
 $ az vm create -n kube-master -g MyClusterDemoGroup --image ubuntults \
   --size Standard_DS2_v2 \
@@ -48,9 +54,7 @@ sudo apt install kubeadm -y
 ONLY MASTERNODES
 $ sudo kubeadm init
 
-kubeadm join 172.0.0.4:6443 --token 7h67jf.lzhy64mkvncsel7l \
-	--discovery-token-ca-cert-hash sha256:c1c97446fb4c515f49e2e8cfd5ef375a9bc680c8232e944c8863f18f48244fb6
-
+kubeadm join 172.0.0.4:6443 --token 6nfetl.q0zhdknsh4b7sdvi --discovery-token-ca-cert-hash sha256:f87cba1f282a899c1a2a8eb09af41582e928b79f3d545743c0820dbd507cbed1
 
 mkdir $HOME/.kube
 # Copy conf file to .kube directory for current user

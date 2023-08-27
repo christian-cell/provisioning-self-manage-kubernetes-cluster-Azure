@@ -1,0 +1,16 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection":"Server=localhost;Database=DotNetCourseDatabase;TrustServerCertificate=true;Trusted_Connection=true;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "AppSettings": {
+    "PasswordKey": "34534akk34****####****asdf_asdf",
+    "TokenKey": "23423423k234j3##@#@lk342523"
+  }
+}
