@@ -14,7 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://kubeadm-christian-worker-2.eastus.cloudapp.azure.com:30305,http://kubeadm-christian-worker-2.eastus.cloudapp.azure.com:30305",
+      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

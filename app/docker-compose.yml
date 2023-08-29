@@ -1,0 +1,37 @@
+version: "3"
+services:
+  api:
+    container_name: server
+    image: christianphp/dotnetseven:1.0.5
+    ports:
+      - '5000:80'
+    restart: unless-stopped
+    #links:
+      #- "db"
+    volumes:
+      - ./dotnetUsersApi:/src
+  
+  sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql-server
+    ports: 
+      - "5010:1433" 
+    environment:
+      - ACCEPT_EULA=y
+      - MSSQL_PID=Developer
+      - SA_PASSWORD="${SA_PASSWORD}"
+    
+    volumes:
+      - ./sqlData/dump:/var/opt/mssql
+  
+  frontend:
+      image: christianphp/usersweb:1.0.0
+      container_name: angular_node
+      ports:
+          - 8100:4200
+      volumes:
+          - "./app/node_modules"
+          - "./usersFront:/app"
+      #tty: true
+volumes:
+  dump:

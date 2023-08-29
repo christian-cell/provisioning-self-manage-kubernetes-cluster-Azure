@@ -1,0 +1,28 @@
+piVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-08-26T17:08:27Z"
+  name: testapi-deployment
+  namespace: dotnet
+  resourceVersion: "532234"
+  uid: 2c1197b8-38f6-4619-aa94-99ff69cc3d0a
+spec:
+  clusterIP: 10.106.129.191
+  clusterIPs:
+  - 10.106.129.191
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30305
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: testapi-pod
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

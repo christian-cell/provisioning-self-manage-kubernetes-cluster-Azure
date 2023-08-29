@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testapi-deployment
+  namespace: dotnet
+spec:
+  selector:
+    matchLabels:
+      app: testapi-pod
+  template:
+    metadata:
+      labels:
+        app: testapi-pod
+    spec:
+      nodeSelector:
+        myworker: workertwo
+      containers:
+      - name: testapi-container
+        image: christianphp/netcoreseven:1.0.5
+        #imagePullPolicy: Never
+        env:
+        - name: MSSQL_PID
+          value: "Developer"
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: SA_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mssql
+              key: SA_PASSWORD
+        - name: MSSQL_SA_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mssql
+              key: SA_PASSWORD
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80:wq
+        

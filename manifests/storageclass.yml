@@ -1,0 +1,10 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  creationTimestamp: "2023-08-22T15:53:18Z"
+  name: my-local-storage
+  resourceVersion: "6045"
+  uid: 270bd8ef-057a-464a-9205-92f733ed8d7b
+provisioner: kubernetes.io/no-provisioner
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer
