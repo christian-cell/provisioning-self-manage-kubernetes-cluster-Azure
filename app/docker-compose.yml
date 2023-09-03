@@ -16,13 +16,14 @@ services:
     container_name: sql-server
     ports: 
       - "5010:1433" 
+    user: root
     environment:
       - ACCEPT_EULA=y
       - MSSQL_PID=Developer
       - SA_PASSWORD="${SA_PASSWORD}"
     
     volumes:
-      - ./sqlData/dump:/var/opt/mssql
+      - /sqlData/dump:/var/opt/mssql/data
   
   frontend:
       image: christianphp/usersweb:1.0.0
