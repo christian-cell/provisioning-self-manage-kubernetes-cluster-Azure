@@ -10,21 +10,23 @@ services:
       #- "db"
     volumes:
       - ./dotnetUsersApi:/src
-  
+
   sql:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: sql-server
     ports: 
       - "5010:1433" 
-    user: root
     environment:
       - ACCEPT_EULA=y
       - MSSQL_PID=Developer
       - SA_PASSWORD="${SA_PASSWORD}"
-    
+
     volumes:
-      - /sqlData/dump:/var/opt/mssql/data
-  
+      #- ./sqlData/dump:/var/opt/mssql
+      # NO OLVIDAR DAR LOS PERMISOS a ./sqlData/dump/data y /log
+      - ./sqlData/dump/data:/var/opt/mssql/data 
+      - ./sqlData/dump/log:/var/opt/mssql/log
+
   frontend:
       image: christianphp/usersweb:1.0.0
       container_name: angular_node
