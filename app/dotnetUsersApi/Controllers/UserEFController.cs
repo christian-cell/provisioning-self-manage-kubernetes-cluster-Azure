@@ -89,10 +89,17 @@ public class UserEFController : ControllerBase
         throw new Exception("Error al borrar usuario");
     }
 
+    
     /********************* SALARY ***************************/
 
     [HttpGet("UserSalary/{userId}")]
     public UserSalary GetUserSalaryEF(int userId)
+    {
+        return _userRepository.GetSingleUserSalary(userId);
+    }
+
+    [HttpGet("SalarioDelUsuario/{userId}")]
+    public UserSalary SalarioDelUsuario(int userId)
     {
         return _userRepository.GetSingleUserSalary(userId);
     }

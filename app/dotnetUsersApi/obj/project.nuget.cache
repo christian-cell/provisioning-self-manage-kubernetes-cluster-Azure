@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yqxn5c8HCCZIH9ztUAqXSJ8I2bMD85teEddYSJh9yqesEkGJbxRx9IHxAMh/IwOaZWvrmcB9W9zNKAkl+dcTaw==",
+  "dgSpecHash": "TJDyX0uV4cB4j8P/PjW2K1ifhslvxwpYAMsUmQrNXtTVJD2WeHBcl0rOV32ju1c79S0rq//M3llPO22ivC10Fw==",
   "success": true,
-  "projectFilePath": "/home/christian/Escritorio/trabajos/dotnet/dotnetUsersApi/dotnetUsersApi.csproj",
+  "projectFilePath": "/home/christian/Escritorio/trabajos/kubernetes/provisioning-self-manage-kubernetes-cluster-Azure/app/dotnetUsersApi/dotnetUsersApi.csproj",
   "expectedPackageFiles": [
     "/home/christian/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/christian/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",

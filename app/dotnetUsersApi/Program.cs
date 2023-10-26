@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors((options)=>{
     options.AddPolicy("DevCors",(corsBuilder)=>
         {
-            corsBuilder.WithOrigins("http://localhost:4200","http://locahost:3000","http://localhost:8000")
+            corsBuilder.WithOrigins("http://localhost:4200","http://localhost:8100","http://locahost:3000","http://localhost:8000")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials();

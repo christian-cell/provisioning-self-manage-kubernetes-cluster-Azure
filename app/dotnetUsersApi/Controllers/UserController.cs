@@ -55,6 +55,12 @@ public class UserController : ControllerBase
         .ToArray(); */
     }
 
+    [HttpGet("GetSaludo")]
+    public string GetSaludo()
+    {
+        return "Hola gente estamos con dockerz";
+    }
+
     [HttpGet("GetSingleUser/{userId}")] 
     //en c# al declarar un método primero es la visibilidad , tipo del valor a retornar y nombre
     // osea en te caso public , tipo modelo Users y el nombre

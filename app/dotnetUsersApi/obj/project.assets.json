@@ -3174,11 +3174,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/christian/Escritorio/trabajos/dotnet/dotnetUsersApi/dotnetUsersApi.csproj",
+      "projectUniqueName": "/home/christian/Escritorio/trabajos/kubernetes/provisioning-self-manage-kubernetes-cluster-Azure/app/dotnetUsersApi/dotnetUsersApi.csproj",
       "projectName": "dotnetUsersApi",
-      "projectPath": "/home/christian/Escritorio/trabajos/dotnet/dotnetUsersApi/dotnetUsersApi.csproj",
+      "projectPath": "/home/christian/Escritorio/trabajos/kubernetes/provisioning-self-manage-kubernetes-cluster-Azure/app/dotnetUsersApi/dotnetUsersApi.csproj",
       "packagesPath": "/home/christian/.nuget/packages/",
-      "outputPath": "/home/christian/Escritorio/trabajos/dotnet/dotnetUsersApi/obj/",
+      "outputPath": "/home/christian/Escritorio/trabajos/kubernetes/provisioning-self-manage-kubernetes-cluster-Azure/app/dotnetUsersApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/christian/.nuget/NuGet/NuGet.Config"
@@ -3261,7 +3261,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }

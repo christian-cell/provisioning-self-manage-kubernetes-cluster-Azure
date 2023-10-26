@@ -9,6 +9,19 @@ namespace DotnetAPI.Models
         public string Gender {get; set;}
         public bool Active {get; set;}
 
+        /* 
+        
+        CREATE TABLE TutorialAppSchema.Users(
+        UserId INT IDENTITY(1,1),
+        FirstName VARCHAR(100),
+        LastName  VARCHAR(100),
+        Email VARCHAR(100),
+        Gender VARCHAR(12),
+        Active INT
+)
+
+         */
+
         /* creamos un constructor para no hacer las propiedades nullables */
         public User()
         {

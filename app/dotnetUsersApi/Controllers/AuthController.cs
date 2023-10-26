@@ -12,6 +12,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Authorization;
 
+
+ /* estamos dentro del contenedor */
+
 namespace DotnetAPI.Controllers
 {
     [Authorize]
